@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Reverse String!</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.8.0/css/bulma.min.css">
+</head>
+
+<body>
+  <section class="section">
+    <div class="container">
+      <div class="field">
+        <label class="label">Reverse Text</label>
+        <div class="control">
+          <textarea onchange="changeContent(event)" class="textarea" placeholder="Textarea"></textarea>
+        </div>
+      </div>
+      <div class="content">
+        <p id="para"></p>
+      </div>
+      
+      <script>
+        function changeContent(e) {
+          var text = e.target.value;
+          text = text.split("").reverse().join("");
+          document.getElementById("para").innerHTML = text;;
+        }
+      </script>
+    </div>
+  </section>
+</body>
+
+</html>
